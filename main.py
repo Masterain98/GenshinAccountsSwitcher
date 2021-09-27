@@ -176,10 +176,12 @@ def deleteBackup():
 
 if __name__ == "__main__":
     backupsData = core.getBackupFiles()
-    print(backupsData)
+    # print(backupsData)
 
     # Load language
     language = locale.getdefaultlocale()[0]
+    if language is "zh_tw" or language is "zh_TW":
+        language = "zh_CN"
     if language not in SupportedLanguages:
         language = "en_US"
 
