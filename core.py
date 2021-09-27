@@ -46,7 +46,7 @@ def RestoreDataFromFile(backupFileName):
     :return: True when success, False when failed
     """
     updateSID(backupFileName)
-    PowershellRestoreCommand = "reg import " + " " + os.getcwd() + "/backups/" + backupFileName + ".reg"
+    PowershellRestoreCommand = 'reg import ' + ' "' + os.getcwd() + '/backups/' + backupFileName + '.reg"'
     try:
         os.system(PowershellRestoreCommand)
         return True
